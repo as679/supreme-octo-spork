@@ -82,6 +82,7 @@ resource "local_file" "ansible_inventory" {
       workers = module.worker.public_ips
       domain_name = var.aws_domain_name
       ingress_class = var.k8s_ingress_class
+      cni = var.k8s_cni
       grafana_password = var.grafana_password
     }
   )
