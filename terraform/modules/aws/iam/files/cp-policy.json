@@ -4,6 +4,16 @@
     {
       "Effect": "Allow",
       "Action": [
+        "ecr:BatchCheckLayerAvailability",
+        "ecr:BatchGetImage",
+        "ecr:GetDownloadUrlForLayer",
+        "ecr:GetAuthorizationToken"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
         "elasticfilesystem:DescribeAccessPoints",
         "elasticfilesystem:DescribeFileSystems"
       ],

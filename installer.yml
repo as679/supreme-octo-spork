@@ -121,6 +121,9 @@
       - k8s:
           state: present
           src: /home/admin/manifests/contour.yaml
+      - k8s:
+          state: present
+          definition: "{{ lookup('file', './ansible/files/contour-ingressclass.yml') }}"
     when: ingress_class == "contour"
   - block:
       - name: Post Install | Install Ingress - Nginx
